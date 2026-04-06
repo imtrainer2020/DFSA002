@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="DBO/DBO.csproj" Id="83e7b481-df5d-47c3-9a02-0f1ac9958f24" />
+  <Project Path="WebApp/WebApp.csproj" Id="76c64670-5418-4d04-9505-9f0d7b061fbd" />
+</Solution>
