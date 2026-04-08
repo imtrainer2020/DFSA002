@@ -61,6 +61,8 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.City).HasMaxLength(50);
             entity.Property(e => e.Phone).HasMaxLength(20);
             entity.Property(e => e.PostCode).HasMaxLength(20);
+            
+            //entity.Property(e => e.Photo).HasColumnType("varbinary(max)");
 
             entity.HasOne(d => d.User).WithMany(p => p.UserDetails)
                 .HasForeignKey(d => d.UserId)

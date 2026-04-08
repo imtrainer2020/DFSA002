@@ -3,44 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{83E7B481-DF5D-47C3-9A02-0F1AC9958F24}|DBO\\DBO.csproj|c:\\users\\2483869\\onedrive - cognizant\\desktop\\practice\\dfsa002\\project\\dbo\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83E7B481-DF5D-47C3-9A02-0F1AC9958F24}|DBO\\DBO.csproj|solutionrelative:dbo\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76C64670-5418-4D04-9505-9F0D7B061FBD}|WebApp\\WebApp.csproj|c:\\users\\2483869\\onedrive - cognizant\\desktop\\practice\\dfsa002\\project\\webapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{76C64670-5418-4D04-9505-9F0D7B061FBD}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83E7B481-DF5D-47C3-9A02-0F1AC9958F24}|DBO\\DBO.csproj|c:\\users\\2483869\\onedrive - cognizant\\desktop\\practice\\dfsa002\\project\\dbo\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83E7B481-DF5D-47C3-9A02-0F1AC9958F24}|DBO\\DBO.csproj|solutionrelative:dbo\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76C64670-5418-4D04-9505-9F0D7B061FBD}|WebApp\\WebApp.csproj|c:\\users\\2483869\\onedrive - cognizant\\desktop\\practice\\dfsa002\\project\\webapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C64670-5418-4D04-9505-9F0D7B061FBD}|WebApp\\WebApp.csproj|solutionrelative:webapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76C64670-5418-4D04-9505-9F0D7B061FBD}|WebApp\\WebApp.csproj|c:\\users\\2483869\\onedrive - cognizant\\desktop\\practice\\dfsa002\\project\\webapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76C64670-5418-4D04-9505-9F0D7B061FBD}|WebApp\\WebApp.csproj|solutionrelative:webapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{83E7B481-DF5D-47C3-9A02-0F1AC9958F24}|DBO\\DBO.csproj|c:\\users\\2483869\\onedrive - cognizant\\desktop\\practice\\dfsa002\\project\\dbo\\models\\userdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83E7B481-DF5D-47C3-9A02-0F1AC9958F24}|DBO\\DBO.csproj|solutionrelative:dbo\\models\\userdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83E7B481-DF5D-47C3-9A02-0F1AC9958F24}|DBO\\DBO.csproj|c:\\users\\2483869\\onedrive - cognizant\\desktop\\practice\\dfsa002\\project\\dbo\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83E7B481-DF5D-47C3-9A02-0F1AC9958F24}|DBO\\DBO.csproj|solutionrelative:dbo\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{83E7B481-DF5D-47C3-9A02-0F1AC9958F24}|DBO\\DBO.csproj|c:\\users\\2483869\\onedrive - cognizant\\desktop\\practice\\dfsa002\\project\\dbo\\iservices\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83E7B481-DF5D-47C3-9A02-0F1AC9958F24}|DBO\\DBO.csproj|solutionrelative:dbo\\iservices\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{83E7B481-DF5D-47C3-9A02-0F1AC9958F24}|DBO\\DBO.csproj|c:\\users\\2483869\\onedrive - cognizant\\desktop\\practice\\dfsa002\\project\\dbo\\iservices\\iuserroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83E7B481-DF5D-47C3-9A02-0F1AC9958F24}|DBO\\DBO.csproj|solutionrelative:dbo\\iservices\\iuserroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{83E7B481-DF5D-47C3-9A02-0F1AC9958F24}|DBO\\DBO.csproj|c:\\users\\2483869\\onedrive - cognizant\\desktop\\practice\\dfsa002\\project\\dbo\\iservices\\iuserdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83E7B481-DF5D-47C3-9A02-0F1AC9958F24}|DBO\\DBO.csproj|solutionrelative:dbo\\iservices\\iuserdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76C64670-5418-4D04-9505-9F0D7B061FBD}|WebApp\\WebApp.csproj|c:\\users\\2483869\\onedrive - cognizant\\desktop\\practice\\dfsa002\\project\\webapp\\views\\userdetail\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{76C64670-5418-4D04-9505-9F0D7B061FBD}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\userdetail\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{83E7B481-DF5D-47C3-9A02-0F1AC9958F24}|DBO\\DBO.csproj|c:\\users\\2483869\\onedrive - cognizant\\desktop\\practice\\dfsa002\\project\\dbo\\services\\userdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{83E7B481-DF5D-47C3-9A02-0F1AC9958F24}|DBO\\DBO.csproj|solutionrelative:dbo\\services\\userdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83E7B481-DF5D-47C3-9A02-0F1AC9958F24}|DBO\\DBO.csproj|c:\\users\\2483869\\onedrive - cognizant\\desktop\\practice\\dfsa002\\project\\dbo\\services\\userroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83E7B481-DF5D-47C3-9A02-0F1AC9958F24}|DBO\\DBO.csproj|solutionrelative:dbo\\services\\userroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76C64670-5418-4D04-9505-9F0D7B061FBD}|WebApp\\WebApp.csproj|c:\\users\\2483869\\onedrive - cognizant\\desktop\\practice\\dfsa002\\project\\webapp\\controllers\\userdetailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C64670-5418-4D04-9505-9F0D7B061FBD}|WebApp\\WebApp.csproj|solutionrelative:webapp\\controllers\\userdetailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83E7B481-DF5D-47C3-9A02-0F1AC9958F24}|DBO\\DBO.csproj|c:\\users\\2483869\\onedrive - cognizant\\desktop\\practice\\dfsa002\\project\\dbo\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83E7B481-DF5D-47C3-9A02-0F1AC9958F24}|DBO\\DBO.csproj|solutionrelative:dbo\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76C64670-5418-4D04-9505-9F0D7B061FBD}|WebApp\\WebApp.csproj|c:\\users\\2483869\\onedrive - cognizant\\desktop\\practice\\dfsa002\\project\\webapp\\models\\userdetailvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C64670-5418-4D04-9505-9F0D7B061FBD}|WebApp\\WebApp.csproj|solutionrelative:webapp\\models\\userdetailvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83E7B481-DF5D-47C3-9A02-0F1AC9958F24}|DBO\\DBO.csproj|c:\\users\\2483869\\onedrive - cognizant\\desktop\\practice\\dfsa002\\project\\dbo\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83E7B481-DF5D-47C3-9A02-0F1AC9958F24}|DBO\\DBO.csproj|solutionrelative:dbo\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83E7B481-DF5D-47C3-9A02-0F1AC9958F24}|DBO\\DBO.csproj|c:\\users\\2483869\\onedrive - cognizant\\desktop\\practice\\dfsa002\\project\\dbo\\services\\userroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83E7B481-DF5D-47C3-9A02-0F1AC9958F24}|DBO\\DBO.csproj|solutionrelative:dbo\\services\\userroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,110 +46,110 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\WebApp\\Program.cs",
-              "RelativeDocumentMoniker": "WebApp\\Program.cs",
-              "ToolTip": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\WebApp\\Program.cs",
-              "RelativeToolTip": "WebApp\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T09:18:14.101Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Result.cs",
-              "DocumentMoniker": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\DBO\\Result.cs",
-              "RelativeDocumentMoniker": "DBO\\Result.cs",
-              "ToolTip": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\DBO\\Result.cs",
-              "RelativeToolTip": "DBO\\Result.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T09:18:03.221Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\DBO\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "DBO\\DependencyInjection.cs",
-              "ToolTip": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\DBO\\DependencyInjection.cs",
-              "RelativeToolTip": "DBO\\DependencyInjection.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T09:17:57.817Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\DBO\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "DBO\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\DBO\\AppDbContext.cs",
-              "RelativeToolTip": "DBO\\AppDbContext.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T09:17:55.629Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\DBO\\IServices\\IUserService.cs",
-              "RelativeDocumentMoniker": "DBO\\IServices\\IUserService.cs",
-              "ToolTip": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\DBO\\IServices\\IUserService.cs",
-              "RelativeToolTip": "DBO\\IServices\\IUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T09:17:51.088Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IUserRoleService.cs",
-              "DocumentMoniker": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\DBO\\IServices\\IUserRoleService.cs",
-              "RelativeDocumentMoniker": "DBO\\IServices\\IUserRoleService.cs",
-              "ToolTip": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\DBO\\IServices\\IUserRoleService.cs",
-              "RelativeToolTip": "DBO\\IServices\\IUserRoleService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T09:17:50.173Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IUserDetailService.cs",
-              "DocumentMoniker": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\DBO\\IServices\\IUserDetailService.cs",
-              "RelativeDocumentMoniker": "DBO\\IServices\\IUserDetailService.cs",
-              "ToolTip": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\DBO\\IServices\\IUserDetailService.cs",
-              "RelativeToolTip": "DBO\\IServices\\IUserDetailService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T09:17:49.248Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\WebApp\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApp\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\WebApp\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "WebApp\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-07T05:40:17.54Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\DBO\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "DBO\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\DBO\\AppDbContext.cs",
+              "RelativeToolTip": "DBO\\AppDbContext.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwBMAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T05:19:39.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "UserDetailService.cs",
               "DocumentMoniker": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\DBO\\Services\\UserDetailService.cs",
               "RelativeDocumentMoniker": "DBO\\Services\\UserDetailService.cs",
               "ToolTip": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\DBO\\Services\\UserDetailService.cs",
               "RelativeToolTip": "DBO\\Services\\UserDetailService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAmwBUAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T09:17:46.886Z",
+              "WhenOpened": "2026-04-07T04:48:53.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\WebApp\\Views\\UserDetail\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApp\\Views\\UserDetail\\Index.cshtml",
+              "ToolTip": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\WebApp\\Views\\UserDetail\\Index.cshtml",
+              "RelativeToolTip": "WebApp\\Views\\UserDetail\\Index.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-07T03:53:05.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserDetailVM.cs",
+              "DocumentMoniker": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\WebApp\\Models\\UserDetailVM.cs",
+              "RelativeDocumentMoniker": "WebApp\\Models\\UserDetailVM.cs",
+              "ToolTip": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\WebApp\\Models\\UserDetailVM.cs",
+              "RelativeToolTip": "WebApp\\Models\\UserDetailVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T03:58:55.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserDetail.cs",
+              "DocumentMoniker": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\DBO\\Models\\UserDetail.cs",
+              "RelativeDocumentMoniker": "DBO\\Models\\UserDetail.cs",
+              "ToolTip": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\DBO\\Models\\UserDetail.cs",
+              "RelativeToolTip": "DBO\\Models\\UserDetail.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAwAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T04:26:43.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\WebApp\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "WebApp\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\WebApp\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "WebApp\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T05:39:23.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserDetailController.cs",
+              "DocumentMoniker": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\WebApp\\Controllers\\UserDetailController.cs",
+              "RelativeDocumentMoniker": "WebApp\\Controllers\\UserDetailController.cs",
+              "ToolTip": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\WebApp\\Controllers\\UserDetailController.cs",
+              "RelativeToolTip": "WebApp\\Controllers\\UserDetailController.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAmwDUAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T03:15:59.399Z",
               "EditorCaption": ""
             },
             {
@@ -164,22 +160,9 @@
               "RelativeDocumentMoniker": "DBO\\Services\\UserRoleService.cs",
               "ToolTip": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\DBO\\Services\\UserRoleService.cs",
               "RelativeToolTip": "DBO\\Services\\UserRoleService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T09:17:45.804Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\DBO\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "DBO\\Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\DBO\\Services\\UserService.cs",
-              "RelativeToolTip": "DBO\\Services\\UserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T09:17:44.622Z",
+              "WhenOpened": "2026-04-07T03:54:36.281Z",
               "EditorCaption": ""
             }
           ]

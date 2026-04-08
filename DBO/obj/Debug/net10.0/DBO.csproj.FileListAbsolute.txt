@@ -12,3 +12,4 @@ C:\Users\2483869\OneDrive - Cognizant\Desktop\Practice\DFSA002\Project\DBO\obj\D
 C:\Users\2483869\OneDrive - Cognizant\Desktop\Practice\DFSA002\Project\DBO\obj\Debug\net10.0\DBO.pdb
 C:\Users\2483869\OneDrive - Cognizant\Desktop\Practice\DFSA002\Project\DBO\obj\Debug\net10.0\DBO.genruntimeconfig.cache
 C:\Users\2483869\OneDrive - Cognizant\Desktop\Practice\DFSA002\Project\DBO\obj\Debug\net10.0\ref\DBO.dll
+C:\Users\2483869\OneDrive - Cognizant\Desktop\Practice\DFSA002\Project\DBO\obj\Debug\net10.0\DBO.sourcelink.json

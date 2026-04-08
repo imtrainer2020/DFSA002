@@ -14,8 +14,8 @@ namespace WebApp.Controllers
         }
         public IActionResult Index()
         {
-            var list = this.service.GetAllRolesAsync();
-            return View();
+            var list = this.service.GetAllRolesAsync().Result.Data;
+            return View(list);
         }
 
         public IActionResult Privacy()

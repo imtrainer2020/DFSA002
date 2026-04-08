@@ -15,6 +15,22 @@ namespace DBO.Services
             this.context = _context;
         }
 
+        public async Task<Result<int>> AddUserDetailAsync(UserDetail userDetail)
+        {
+            try
+            {
+                await context.UserDetails.AddAsync(userDetail);
+                await context.SaveChangesAsync();
+
+                // Return the primary key (Udid) on success
+                return Result<int>.Success(userDetail.Udid, "User details and photo saved successfully.");
+            }
+            catch (Exception ex)
+            {
+                return Result<int>.Failure("Error: " + ex.Message);
+            }
+        }
+
         public async Task<Result<UserDetail>> GetUserDetailByUserIdAsync(int userId)
         {
             try
