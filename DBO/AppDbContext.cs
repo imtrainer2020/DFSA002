@@ -57,7 +57,8 @@ public partial class AppDbContext : DbContext
             entity.ToTable("UserDetail");
 
             entity.Property(e => e.Udid).HasColumnName("UDId");
-            entity.Property(e => e.Address).HasMaxLength(100);
+            entity.Property(e => e.FullName).HasMaxLength(100);
+            entity.Property(e => e.Address).HasMaxLength(500);
             entity.Property(e => e.City).HasMaxLength(50);
             entity.Property(e => e.Phone).HasMaxLength(20);
             entity.Property(e => e.PostCode).HasMaxLength(20);
