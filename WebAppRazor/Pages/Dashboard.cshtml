@@ -2,4 +2,33 @@
 @model WebAppRazor.Pages.DashboardModel
 @{
 }
-<h2>User Dashboard</h2>
+<div class="container mt-5">
+	<div class="row">
+		<div class="col-md-8 mx-auto">
+			<div class="card border-0 shadow">
+				<div class="card-body text-center p-5">
+					<div class="mb-4">
+						<i class="bi bi-person-circle text-primary" style="font-size: 4rem;"></i>
+					</div>
+					<h1 class="display-6">Welcome back!</h1>
+					<p class="lead text-muted">This is your private user dashboard.</p>
+                    
+					<hr class="my-4">
+                    
+					<div class="row g-3">
+						<div class="col-6">
+							<button class="btn btn-outline-primary w-100">My Profile</button>
+						</div>
+						<div class="col-6">
+							<button class="btn btn-outline-secondary w-100">Settings</button>
+						</div>
+					</div>
+
+					<div class="mt-4">
+						<a asp-page="/Index" class="text-danger text-decoration-none">Sign Out</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
