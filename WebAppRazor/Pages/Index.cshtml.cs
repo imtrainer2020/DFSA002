@@ -1,3 +1,4 @@
+using DBO;
 using DBO.IServices;
 using DBO.Models;
 using DBO.Services;
@@ -34,16 +35,19 @@ namespace WebAppRazor.Pages
         // HANDLER 1: Handles the Login Form
         public async Task<IActionResult> OnPostLoginAsync()
         {
-            // ValidateLoginCredentials returns Result<bool>, so await it and inspect its members.
-            var validationResult = await userService.ValidateLoginCredentials(LoginData.Email, LoginData.Password);
+            var result = await userService.GetUserByEmailAsync(LoginData.Email);
 
-            if (validationResult.IsSuccess)
+            // Check if user exists and password matches
+            if (result.IsSuccess && result.Data.Password == LoginData.Password)
             {
                 // Successfully logged in! 
-                return RedirectToPage("/Dashboard");
+                if (result.Data.Role.ToLower() == "admin")
+                    return RedirectToPage("/AdminDashboard");
+                else
+                    return RedirectToPage("/Dashboard");
             }
 
-            ErrorMessage = validationResult.Error ?? "Invalid Login Attempt.";
+            ErrorMessage = result.Error ?? "Invalid email or password.";
             return Page();
         }
 
