@@ -6,6 +6,7 @@ using WebAppRazor.Pages.Models;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using WebAppRazor.Pages.Shared;
 
 namespace WebAppRazor.Pages
 {
@@ -67,8 +68,9 @@ namespace WebAppRazor.Pages
                 // 1. Create "Claims" (Information about the user)
                 var claims = new List<Claim>
                 {
-                    new Claim(ClaimTypes.Name, user.Email),
-                    new Claim(ClaimTypes.Role, user.Role) // This is the most important part!
+                    new Claim(ClaimTypes.Name, user.Email), 
+                    new Claim(ClaimTypes.Role, user.Role), // This is the most important part!
+                    new Claim("DBUserId", user.UserId.ToString()) //Will use for checking which user is logged in
                 };
 
                 // 2. Create the Identity
@@ -134,6 +136,10 @@ namespace WebAppRazor.Pages
             return Page();
         }
 
-        
+        public async Task<IActionResult> OnGetLogoutAsync()
+        {
+            await CommonFuncs.LogoutAsync();
+            return RedirectToPage("/Index");
+        }
     }
 }

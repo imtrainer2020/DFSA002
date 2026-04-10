@@ -9,7 +9,7 @@ namespace DBO.IServices
     {
         public Task<Result<UserDetail>> GetUserDetailByUserIdAsync(int userId);
         public Task<Result<int>> AddUserDetailAsync(UserDetail userDetail);
-        //public Task<Result<int>> UpdateUserDetailAsync(UserDetail userDetail);
-        //public Task<Result<int>> DeleteUserDetailAsync(int userId);
+        public Task<Result<int>> UpdateUserDetailAsync(UserDetail userDetail);
+        public Task<Result<int>> DeleteUserDetailAsync(int userDetailId);
     }
 }

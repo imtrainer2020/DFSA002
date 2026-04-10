@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using WebAppRazor.Pages.Shared;
 
 namespace WebAppRazor.Pages
 {
@@ -29,7 +30,7 @@ namespace WebAppRazor.Pages
 
         public async Task<IActionResult> OnGetLogoutAsync()
         {
-            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            await CommonFuncs.LogoutAsync();
             return RedirectToPage("/Index");
         }
 

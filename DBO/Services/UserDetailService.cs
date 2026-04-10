@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using DBO.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace DBO.Services
 {
@@ -31,6 +32,26 @@ namespace DBO.Services
             }
         }
 
+        public async Task<Result<int>> DeleteUserDetailAsync(int userDetailId)
+        {
+            try
+            {
+                var ud = await context.UserDetails.Where(e => e.Udid == userDetailId).FirstOrDefaultAsync();
+                if (ud == null)
+                    return Result<int>.Failure("User detail not found.");
+                else
+                {
+                    context.UserDetails.Remove(ud);
+                    return Result<int>.Success(await context.SaveChangesAsync(),
+                        "User details deleted successfully.");
+                }
+            }
+            catch (Exception ex)
+            {
+                return Result<int>.Failure("Error: " + ex.Message);
+            }
+        }
+
         public async Task<Result<UserDetail>> GetUserDetailByUserIdAsync(int userId)
         {
             try
@@ -44,6 +65,32 @@ namespace DBO.Services
                 return Result<UserDetail>.Failure("Error: " + ex.Message);
             }
 
+        }
+
+        public async Task<Result<int>> UpdateUserDetailAsync(UserDetail userDetail)
+        {
+            try
+            {
+                var ud = await context.UserDetails.Where(e => e.Udid == userDetail.Udid).FirstOrDefaultAsync();
+                if (ud == null)
+                    return Result<int>.Failure("User detail not found.");
+                else
+                {
+                    ud.FullName = userDetail.FullName;
+                    ud.Address = userDetail.Address;
+                    ud.City = userDetail.City;
+                    ud.PostCode = userDetail.PostCode;
+                    ud.Phone = userDetail.Phone;
+                    ud.Photo = userDetail.Photo;
+                    context.UserDetails.Update(ud);
+                    await context.SaveChangesAsync();
+                    return Result<int>.Success(ud.Udid, "User details updated successfully.");
+                }
+            }
+            catch (Exception ex)
+            {
+                return Result<int>.Failure("Error: " + ex.Message);
+            }
         }
     }
 }
