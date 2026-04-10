@@ -1,10 +1,11 @@
-using DBO;
 using DBO.IServices;
 using DBO.Models;
-using DBO.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using WebAppRazor.Pages.Models;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace WebAppRazor.Pages
 {
@@ -63,6 +64,21 @@ namespace WebAppRazor.Pages
             // Check password match
             if (user.Password == LoginData.Password)
             {
+                // 1. Create "Claims" (Information about the user)
+                var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name, user.Email),
+                    new Claim(ClaimTypes.Role, user.Role) // This is the most important part!
+                };
+
+                // 2. Create the Identity
+                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+                // 3. Sign the user in (Give the browser the cookie)
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
+                    new ClaimsPrincipal(claimsIdentity));
+
+
                 if (!string.IsNullOrEmpty(user.Role) && user.Role.ToLower() == "admin")
                     return RedirectToPage("/AdminDashboard");
                 else
@@ -117,5 +133,7 @@ namespace WebAppRazor.Pages
             ErrorMessage = result.Error ?? "Something went wrong.";
             return Page();
         }
+
+        
     }
 }

@@ -1,6 +1,7 @@
 ﻿@page
 @model WebAppRazor.Pages.DashboardModel
 @{
+	ViewData["Title"] = "User Dashboard";
 }
 <div class="container mt-5">
 	<div class="row">
@@ -25,7 +26,7 @@
 					</div>
 
 					<div class="mt-4">
-						<a asp-page="/Index" class="text-danger text-decoration-none">Sign Out</a>
+						<a asp-page-handler="Logout" class="text-danger text-decoration-none">Sign Out</a>
 					</div>
 				</div>
 			</div>

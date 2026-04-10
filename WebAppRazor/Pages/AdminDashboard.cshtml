@@ -1,13 +1,13 @@
 ﻿@page
 @model AdminDashboardModel
 @{
-	ViewData["Title"] = "Admin Panel";
+	ViewData["Title"] = "Admin Dashboard";
 }
 
 <div class="container mt-4">
 	<div class="d-flex justify-content-between align-items-center mb-4">
 		<h2>Admin Dashboard</h2>
-		<a asp-page="/Index" class="btn btn-outline-danger btn-sm">Logout</a>
+		<a asp-page-handler="Logout" class="btn btn-outline-danger btn-sm">Logout</a>
 	</div>
 
 	<div class="row">
