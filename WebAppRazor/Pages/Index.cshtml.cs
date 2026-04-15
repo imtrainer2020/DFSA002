@@ -138,7 +138,7 @@ namespace WebAppRazor.Pages
 
         public async Task<IActionResult> OnGetLogoutAsync()
         {
-            await CommonFuncs.LogoutAsync();
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToPage("/Index");
         }
     }

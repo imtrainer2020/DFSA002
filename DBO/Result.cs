@@ -19,10 +19,19 @@ namespace DBO
             this.Data = data;
         }
         public static Result<T> Success(T data, string message = "Success") =>
-            new Result<T> { IsSuccess = true, Data = data, Message = message };
+            new Result<T>
+            {
+                IsSuccess = true,
+                Data = data,
+                Message = message
+            };
 
         public static Result<T> Failure(string error, string message = "Failure") =>
-            new Result<T> { IsSuccess = false, Error = error, Message = message };
-
+            new Result<T>
+            {
+                IsSuccess = false,
+                Error = error,
+                Message = message
+            };
     }
 }

@@ -10,13 +10,11 @@ namespace WebAppRazor.Pages
     [Authorize(Roles = "User")]
     public class DashboardModel : PageModel
     {
-        public void OnGet()
-        {
-        }
+        public async Task OnGetAsync() { }
 
         public async Task<IActionResult> OnGetLogoutAsync()
         {
-            await CommonFuncs.LogoutAsync();
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToPage("/Index");
         }
     }

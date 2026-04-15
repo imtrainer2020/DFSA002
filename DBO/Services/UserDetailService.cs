@@ -56,7 +56,7 @@ namespace DBO.Services
         {
             try
             {
-                var userDetail = await context.UserDetails.FindAsync(userId);
+                var userDetail = await context.UserDetails.Where(u => u.UserId == userId).FirstOrDefaultAsync();
                 return userDetail != null ? Result<UserDetail>.Success(userDetail)
                     : Result<UserDetail>.Failure("User detail not found.");
             }
@@ -71,7 +71,7 @@ namespace DBO.Services
         {
             try
             {
-                var ud = await context.UserDetails.Where(e => e.Udid == userDetail.Udid).FirstOrDefaultAsync();
+                var ud = await context.UserDetails.Where(e => e.Udid == userDetail.Udid || e.UserId == userDetail.UserId).FirstOrDefaultAsync();
                 if (ud == null)
                     return Result<int>.Failure("User detail not found.");
                 else
@@ -81,7 +81,8 @@ namespace DBO.Services
                     ud.City = userDetail.City;
                     ud.PostCode = userDetail.PostCode;
                     ud.Phone = userDetail.Phone;
-                    ud.Photo = userDetail.Photo;
+                    if (userDetail.Photo != null && userDetail.Photo != ud.Photo)
+                        ud.Photo = userDetail.Photo;
                     context.UserDetails.Update(ud);
                     await context.SaveChangesAsync();
                     return Result<int>.Success(ud.Udid, "User details updated successfully.");
