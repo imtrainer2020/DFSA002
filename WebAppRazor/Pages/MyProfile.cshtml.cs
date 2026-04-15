@@ -11,16 +11,19 @@ namespace WebAppRazor.Pages
     public class MyProfileModel : PageModel
     {
         private readonly IUserDetailService service;
+        private readonly IUserService userService;
 
-        int LoggedInUserId => int.Parse(User?.FindFirst("DBUserId")?.Value ?? "0");
-
-        // This property helps the HTML know where to send the "Back" button
-        public string DashboardLink => User.IsInRole("Admin") ? "/AdminDashboard" : "/Dashboard";
-
-        public MyProfileModel(IUserDetailService _service)
+        public MyProfileModel(IUserDetailService _service, IUserService _userService)
         {
             this.service = _service;
+            this.userService = _userService;
         }
+
+        // Helper to get ID from Claim
+        [BindProperty]
+        public int LoggedInUserId => int.Parse(User?.FindFirst("DBUserId")?.Value ?? "0");
+
+        public string DashboardLink => User.IsInRole("Admin") ? "/AdminDashboard" : "/Dashboard";
 
         [BindProperty]
         public UserProfileInput ProfileInput { get; set; }
@@ -28,22 +31,32 @@ namespace WebAppRazor.Pages
         [BindProperty]
         public IFormFile? UploadedPhoto { get; set; }
 
+        [BindProperty]
+        public int TargetUserId { get; set; }
+
+        [BindProperty]
+        public string NewPassword { get; set; }
+
+        [BindProperty]
+        public string ConfirmPassword { get; set; }
+
         public string? StatusMessage { get; set; }
         public string? ErrorMessage { get; set; }
 
-        public async Task<IActionResult> OnGetAsync()
+        public async Task<IActionResult> OnGetAsync(int? userId)
         {
-            // 1. Get the logged-in User's ID from the Claims
-            if (LoggedInUserId == 0)
-                return RedirectToPage("/Index");
+            if (LoggedInUserId == 0) return RedirectToPage("/Index");
 
-            // 2. Fetch details from DB
-            ProfileInput = new UserProfileInput { UserId = LoggedInUserId };
+            // If Admin is editing someone else, use that ID, otherwise use own ID
+            TargetUserId = (userId.HasValue && User.IsInRole("Admin")) ? userId.Value : LoggedInUserId;
 
-            var userDetail = await service.GetUserDetailByUserIdAsync(LoggedInUserId);
+            ProfileInput = new UserProfileInput { UserId = TargetUserId };
+            var userDetail = await service.GetUserDetailByUserIdAsync(TargetUserId);
+
             if (userDetail != null && userDetail.IsSuccess && userDetail.Data != null)
             {
                 var data = userDetail.Data;
+                ProfileInput.Udid = data.Udid;
                 ProfileInput.FullName = data.FullName;
                 ProfileInput.Address = data.Address;
                 ProfileInput.City = data.City;
@@ -55,48 +68,73 @@ namespace WebAppRazor.Pages
             return Page();
         }
 
+        // Form 1: Save Profile Details
         public async Task<IActionResult> OnPostAsync()
         {
-            // 1. Ensure the UserId is correctly set
-            ProfileInput.UserId = LoggedInUserId;
-
             UserDetail dbRecord = new UserDetail
             {
-                UserId = ProfileInput.UserId,
+                UserId = TargetUserId,
                 FullName = ProfileInput.FullName,
                 Address = ProfileInput.Address,
                 City = ProfileInput.City,
                 PostCode = ProfileInput.PostCode,
-                Phone = ProfileInput.Phone
+                Phone = ProfileInput.Phone,
+                Udid = ProfileInput.Udid
             };
 
-            // 2. Handle the Photo Upload if a new file is selected
             if (UploadedPhoto != null)
             {
-                using (var memoryStream = new MemoryStream())
+                using (var ms = new MemoryStream())
                 {
-                    await UploadedPhoto.CopyToAsync(memoryStream);
-                    ProfileInput.Photo = memoryStream.ToArray();
+                    await UploadedPhoto.CopyToAsync(ms);
+                    dbRecord.Photo = ms.ToArray();
                 }
             }
-
-            dbRecord.Photo = ProfileInput.Photo;
-
-            // 4. Update or Add
-            var exisingRecord = await service.GetUserDetailByUserIdAsync(ProfileInput.UserId);
-
-            if (exisingRecord== null || !exisingRecord.IsSuccess)
-            {
-                await service.AddUserDetailAsync(dbRecord);
-                StatusMessage = "Profile created successfully!";
-            }
             else
-            {
+                dbRecord.Photo = ProfileInput.Photo;
+
+            var existing = await service.GetUserDetailByUserIdAsync(TargetUserId);
+            if (existing == null || !existing.IsSuccess)
+                await service.AddUserDetailAsync(dbRecord);
+            else
                 await service.UpdateUserDetailAsync(dbRecord);
-                StatusMessage = "Profile updated successfully!";
+
+            TempData["StatusMessage"] = "Profile updated successfully!";
+            return RedirectToPage(new { userId = TargetUserId });
+        }
+
+        // Form 2: Change Password (Named Handler)
+        public async Task<IActionResult> OnPostChangePasswordAsync()
+        {
+            if (!User.IsInRole("Admin"))
+            {
+                ErrorMessage = "Only Admin can change passwords";
+                return RedirectToPage("/Dashboard");
+            }
+            if (string.IsNullOrWhiteSpace(NewPassword) || NewPassword != ConfirmPassword)
+            {
+                ErrorMessage = "Passwords do not match or are empty.";
+                await OnGetAsync(TargetUserId);
+                return Page();
             }
 
-            return RedirectToPage(DashboardLink);
+            var userResult = await userService.GetUserByUserIdAsync(TargetUserId);
+            if (!userResult.IsSuccess)
+            {
+                ErrorMessage = "User not found.";
+                return Page();
+            }
+
+            var result = await userService.ResetPasswordAsync(NewPassword, userResult.Data.Email);
+            if (result.IsSuccess)
+            {
+                TempData["StatusMessage"] = "Password has been updated successfully.";
+                return RedirectToPage(new { userId = TargetUserId });
+            }
+
+            ErrorMessage = result.Message;
+            await OnGetAsync(TargetUserId);
+            return Page();
         }
     }
 }

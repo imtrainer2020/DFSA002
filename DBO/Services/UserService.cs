@@ -12,9 +12,11 @@ namespace DBO.Services
     public class UserService : IUserService
     {
         private readonly AppDbContext context;
-        public UserService(AppDbContext _context)
+        private readonly IUserDetailService userDetailService;
+        public UserService(AppDbContext _context, IUserDetailService _userDetailService)
         {
             this.context = _context;
+            this.userDetailService = _userDetailService;
         }
 
         public async Task<Result<int>> AddUserAsync(User user)
@@ -34,15 +36,31 @@ namespace DBO.Services
 
         public async Task<Result<int>> DeleteUserAsync(int userId)
         {
+            // 1. Start a transaction
+            using var transaction = await this.context.Database.BeginTransactionAsync();
+
             try
             {
                 var user = await GetUserByIdOrEmail(userId);
-                if (user == null)
+                if (user != null)
                 {
+                    // 2. Delete the details first
+                    var detailResult = await userDetailService.DeleteUserDetailbyUserIdAsync(userId);
+
+                    // If details couldn't be deleted, we stop and roll back
+                    if (!detailResult.IsSuccess)
+                    {
+                        await transaction.RollbackAsync();
+                        return Result<int>.Failure("Failed to delete user details: " + detailResult.Message);
+                    }
+
                     context.Users.Remove(user);
-                    return Result<int>.Success(
-                        await context.SaveChangesAsync(),
-                        "User deleted successfully.");
+                    int rowsAffected = await context.SaveChangesAsync();
+
+                    // 4. If everything reached here without crashing, save it permanently
+                    await transaction.CommitAsync();
+
+                    return Result<int>.Success(rowsAffected, "User and details deleted successfully.");
                 }
                 else
                 {
@@ -51,6 +69,8 @@ namespace DBO.Services
             }
             catch (Exception ex)
             {
+                // 5. If anything goes wrong anywhere, undo everything!
+                await transaction.RollbackAsync();
                 return Result<int>.Failure("Error: " + ex.Message);
             }
 
@@ -176,7 +196,7 @@ namespace DBO.Services
             {
                 return Result<bool>.Failure("Error: " + ex.Message);
             }
-            
+
         }
 
         private async Task<User?> GetUserByIdOrEmail(int userId, string email = null)

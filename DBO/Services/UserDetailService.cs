@@ -52,6 +52,26 @@ namespace DBO.Services
             }
         }
 
+        public async Task<Result<int>> DeleteUserDetailbyUserIdAsync(int userId)
+        {
+            try
+            {
+                var ud = await context.UserDetails.Where(e => e.UserId == userId).FirstOrDefaultAsync();
+                if (ud == null)
+                    return Result<int>.Failure("User detail not found.");
+                else
+                {
+                    context.UserDetails.Remove(ud);
+                    return Result<int>.Success(await context.SaveChangesAsync(),
+                        "User details deleted successfully.");
+                }
+            }
+            catch (Exception ex)
+            {
+                return Result<int>.Failure("Error: " + ex.Message);
+            }
+        }
+
         public async Task<Result<UserDetail>> GetUserDetailByUserIdAsync(int userId)
         {
             try
