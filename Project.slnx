@@ -1,4 +1,6 @@
 <Solution>
+  <Project Path="DBO.Tests/DBO.Tests.csproj" Id="b16af149-c3f9-4b82-aeb2-0e95b3eb05e0" />
   <Project Path="DBO/DBO.csproj" Id="83e7b481-df5d-47c3-9a02-0f1ac9958f24" />
+  <Project Path="WebAppRazor.Tests/WebAppRazor.Tests.csproj" Id="9ef548ec-67e0-4946-8864-16d4f0279f83" />
   <Project Path="WebAppRazor/WebAppRazor.csproj" Id="5f4a817d-afc4-4ba0-b8c9-4d8d3452c7d7" />
 </Solution>
