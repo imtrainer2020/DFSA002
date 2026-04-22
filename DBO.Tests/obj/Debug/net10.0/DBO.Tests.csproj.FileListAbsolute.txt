@@ -218,3 +218,4 @@ C:\Users\2483869\OneDrive - Cognizant\Desktop\Practice\DFSA002\Project\DBO.Tests
 C:\Users\2483869\OneDrive - Cognizant\Desktop\Practice\DFSA002\Project\DBO.Tests\obj\Debug\net10.0\DBO.Tests.pdb
 C:\Users\2483869\OneDrive - Cognizant\Desktop\Practice\DFSA002\Project\DBO.Tests\obj\Debug\net10.0\DBO.Tests.genruntimeconfig.cache
 C:\Users\2483869\OneDrive - Cognizant\Desktop\Practice\DFSA002\Project\DBO.Tests\obj\Debug\net10.0\ref\DBO.Tests.dll
+C:\Users\2483869\OneDrive - Cognizant\Desktop\Practice\DFSA002\Project\DBO.Tests\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.InMemory.dll

@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9EF548EC-67E0-4946-8864-16D4F0279F83}|WebAppRazor.Tests\\WebAppRazor.Tests.csproj|c:\\users\\2483869\\onedrive - cognizant\\desktop\\practice\\dfsa002\\project\\webapprazor.tests\\forgotpasswordpagetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9EF548EC-67E0-4946-8864-16D4F0279F83}|WebAppRazor.Tests\\WebAppRazor.Tests.csproj|solutionrelative:webapprazor.tests\\forgotpasswordpagetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B16AF149-C3F9-4B82-AEB2-0E95B3EB05E0}|DBO.Tests\\DBO.Tests.csproj|c:\\users\\2483869\\onedrive - cognizant\\desktop\\practice\\dfsa002\\project\\dbo.tests\\userroleservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B16AF149-C3F9-4B82-AEB2-0E95B3EB05E0}|DBO.Tests\\DBO.Tests.csproj|solutionrelative:dbo.tests\\userroleservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5F4A817D-AFC4-4BA0-B8C9-4D8D3452C7D7}|WebAppRazor\\WebAppRazor.csproj|c:\\users\\2483869\\onedrive - cognizant\\desktop\\practice\\dfsa002\\project\\webapprazor\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F4A817D-AFC4-4BA0-B8C9-4D8D3452C7D7}|WebAppRazor\\WebAppRazor.csproj|solutionrelative:webapprazor\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9EF548EC-67E0-4946-8864-16D4F0279F83}|WebAppRazor.Tests\\WebAppRazor.Tests.csproj|c:\\users\\2483869\\onedrive - cognizant\\desktop\\practice\\dfsa002\\project\\webapprazor.tests\\indexpagetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9EF548EC-67E0-4946-8864-16D4F0279F83}|WebAppRazor.Tests\\WebAppRazor.Tests.csproj|solutionrelative:webapprazor.tests\\indexpagetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{83E7B481-DF5D-47C3-9A02-0F1AC9958F24}|DBO\\DBO.csproj|c:\\users\\2483869\\onedrive - cognizant\\desktop\\practice\\dfsa002\\project\\dbo\\services\\userroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83E7B481-DF5D-47C3-9A02-0F1AC9958F24}|DBO\\DBO.csproj|solutionrelative:dbo\\services\\userroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ForgotPasswordPageTests.cs",
-              "DocumentMoniker": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\WebAppRazor.Tests\\ForgotPasswordPageTests.cs",
-              "RelativeDocumentMoniker": "WebAppRazor.Tests\\ForgotPasswordPageTests.cs",
-              "ToolTip": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\WebAppRazor.Tests\\ForgotPasswordPageTests.cs",
-              "RelativeToolTip": "WebAppRazor.Tests\\ForgotPasswordPageTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T03:27:03.732Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Index.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\WebAppRazor\\Pages\\Index.cshtml.cs",
-              "RelativeDocumentMoniker": "WebAppRazor\\Pages\\Index.cshtml.cs",
-              "ToolTip": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\WebAppRazor\\Pages\\Index.cshtml.cs",
-              "RelativeToolTip": "WebAppRazor\\Pages\\Index.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAnAAAAAAAAAA==",
+              "Title": "UserRoleService.cs",
+              "DocumentMoniker": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\DBO\\Services\\UserRoleService.cs",
+              "RelativeDocumentMoniker": "DBO\\Services\\UserRoleService.cs",
+              "ToolTip": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\DBO\\Services\\UserRoleService.cs",
+              "RelativeToolTip": "DBO\\Services\\UserRoleService.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAuwGUAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T10:17:52.356Z",
+              "WhenOpened": "2026-04-22T04:08:05.71Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IndexPageTests.cs",
-              "DocumentMoniker": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\WebAppRazor.Tests\\IndexPageTests.cs",
-              "RelativeDocumentMoniker": "WebAppRazor.Tests\\IndexPageTests.cs",
-              "ToolTip": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\WebAppRazor.Tests\\IndexPageTests.cs",
-              "RelativeToolTip": "WebAppRazor.Tests\\IndexPageTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAbAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "UserRoleServiceTests.cs",
+              "DocumentMoniker": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\DBO.Tests\\UserRoleServiceTests.cs",
+              "RelativeDocumentMoniker": "DBO.Tests\\UserRoleServiceTests.cs",
+              "ToolTip": "C:\\Users\\2483869\\OneDrive - Cognizant\\Desktop\\Practice\\DFSA002\\Project\\DBO.Tests\\UserRoleServiceTests.cs",
+              "RelativeToolTip": "DBO.Tests\\UserRoleServiceTests.cs",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAYwKEAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T03:41:33.038Z",
+              "WhenOpened": "2026-04-22T04:07:30.717Z",
               "EditorCaption": ""
             }
           ]

@@ -85,8 +85,15 @@ namespace DBO.Services
             try
             {
                 var role = await context.UserRoles.Where(e => e.RoleName == oldRoleName).FirstOrDefaultAsync();
-                role.RoleName = newRoleName;
-                return Result<int>.Success(await context.SaveChangesAsync(), "Role updated successfully.");
+                if (role != null)
+                {
+                    role.RoleName = newRoleName;
+                    return Result<int>.Success(await context.SaveChangesAsync(), "Role updated successfully.");
+                }
+                else
+                {
+                    return Result<int>.Failure($"Role {oldRoleName} not found.");
+                }
             }
             catch (Exception ex)
             {
