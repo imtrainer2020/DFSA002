@@ -65,7 +65,7 @@ namespace DBO.Tests
 
             // Assert
             Assert.That(result.IsSuccess, Is.False);
-            Assert.That(result.Error, Does.StartWith("Error:"));
+            Assert.That(result.Message, Does.StartWith("Error:"));
         }
 
         #endregion

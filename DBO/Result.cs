@@ -8,30 +8,27 @@ namespace DBO
     {
         public bool IsSuccess { get; set; } = true;
         public string Message { get; set; } = string.Empty;
-        public string Error { get; set; } = string.Empty;
         public T? Data { get; set; }
         public Result() { }
-        public Result(bool isSuccess, string message, string error, T? data = default)
+        public Result(bool isSuccess, string message, T? data = default)
         {
             this.IsSuccess = isSuccess;
             this.Message = message;
-            this.Error = error;
             this.Data = data;
         }
-        public static Result<T> Success(T data, string message = "Success") =>
+        public static Result<T> Success(T data, string successMessage = "Success") =>
             new Result<T>
             {
                 IsSuccess = true,
                 Data = data,
-                Message = message
+                Message = successMessage
             };
 
-        public static Result<T> Failure(string error, string message = "Failure") =>
+        public static Result<T> Failure(string errorMessage) =>
             new Result<T>
             {
                 IsSuccess = false,
-                Error = error,
-                Message = message
+                Message = errorMessage
             };
     }
 }

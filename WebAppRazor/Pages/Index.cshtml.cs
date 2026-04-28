@@ -56,7 +56,7 @@ namespace WebAppRazor.Pages
 
             if (!result.IsSuccess || result.Data == null)
             {
-                ErrorMessage = result.Error ?? "Invalid email or password.";
+                ErrorMessage = result.Message ?? "Invalid email or password.";
                 return Page();
             }
 
@@ -111,7 +111,7 @@ namespace WebAppRazor.Pages
             if (check.IsSuccess || check.Data)
             {
                 // service failed to determine existence
-                ErrorMessage = (check.Error != null && check.Error.Length > 0) ? check.Error : "Email already exists.";
+                ErrorMessage = (check.Message != null && check.Message.Length > 0) ? check.Message : "Email already exists.";
                 return Page();
             }
 
@@ -132,7 +132,7 @@ namespace WebAppRazor.Pages
                 return RedirectToPage(); // Refresh page to show message
             }
 
-            ErrorMessage = result.Error ?? "Something went wrong.";
+            ErrorMessage = result.Message ?? "Something went wrong.";
             return Page();
         }
 
