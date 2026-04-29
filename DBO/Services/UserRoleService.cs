@@ -36,7 +36,7 @@ namespace DBO.Services
         {
             try
             {
-                var role = await context.UserRoles.Where(e => e.RoleName == roleName).FirstOrDefaultAsync();
+                var role = await context.UserRoles.Where(e => e.RoleName == roleName).AsNoTracking().FirstOrDefaultAsync();
                 if (role != null)
                 {
                     context.UserRoles.Remove(role);
@@ -57,7 +57,7 @@ namespace DBO.Services
         {
             try
             {
-                var list = await context.UserRoles.ToListAsync();
+                var list = await context.UserRoles.AsNoTracking().ToListAsync();
                 return Result<List<UserRole>>.Success(list);
             }
             catch (Exception ex)
@@ -71,7 +71,7 @@ namespace DBO.Services
         {
             try
             {
-                var role = await context.UserRoles.Where(e => e.RoleName == roleName).FirstOrDefaultAsync();
+                var role = await context.UserRoles.Where(e => e.RoleName == roleName).AsNoTracking().FirstOrDefaultAsync();
                 return Result<UserRole>.Success(role);
             }
             catch (Exception ex)
@@ -84,7 +84,8 @@ namespace DBO.Services
         {
             try
             {
-                var role = await context.UserRoles.Where(e => e.RoleName == oldRoleName).FirstOrDefaultAsync();
+                var role = await context.UserRoles.Where(e => e.RoleName == oldRoleName)
+                    .AsNoTracking().FirstOrDefaultAsync();
                 if (role != null)
                 {
                     role.RoleName = newRoleName;

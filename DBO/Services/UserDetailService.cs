@@ -36,7 +36,7 @@ namespace DBO.Services
         {
             try
             {
-                var ud = await context.UserDetails.Where(e => e.Udid == userDetailId).FirstOrDefaultAsync();
+                var ud = await context.UserDetails.Where(e => e.Udid == userDetailId).AsNoTracking().FirstOrDefaultAsync();
                 if (ud == null)
                     return Result<int>.Failure("User detail not found.");
                 else
@@ -56,7 +56,7 @@ namespace DBO.Services
         {
             try
             {
-                var ud = await context.UserDetails.Where(e => e.UserId == userId).FirstOrDefaultAsync();
+                var ud = await context.UserDetails.Where(e => e.UserId == userId).AsNoTracking().FirstOrDefaultAsync();
                 if (ud == null)
                     return Result<int>.Failure("User detail not found.");
                 else
@@ -76,7 +76,7 @@ namespace DBO.Services
         {
             try
             {
-                var userDetail = await context.UserDetails.Where(u => u.UserId == userId).FirstOrDefaultAsync();
+                var userDetail = await context.UserDetails.Where(u => u.UserId == userId).AsNoTracking().FirstOrDefaultAsync();
                 return userDetail != null ? Result<UserDetail>.Success(userDetail)
                     : Result<UserDetail>.Failure("User detail not found.");
             }
@@ -91,7 +91,7 @@ namespace DBO.Services
         {
             try
             {
-                var ud = await context.UserDetails.Where(e => e.Udid == userDetail.Udid || e.UserId == userDetail.UserId).FirstOrDefaultAsync();
+                var ud = await context.UserDetails.Where(e => e.Udid == userDetail.Udid || e.UserId == userDetail.UserId).AsNoTracking().FirstOrDefaultAsync();
                 if (ud == null)
                     return Result<int>.Failure("User detail not found.");
                 else

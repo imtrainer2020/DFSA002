@@ -80,7 +80,7 @@ namespace DBO.Services
         {
             try
             {
-                return Result<IList<User>>.Success(await context.Users.ToListAsync());
+                return Result<IList<User>>.Success(await context.Users.AsNoTracking().ToListAsync());
             }
             catch (Exception ex)
             {
@@ -199,12 +199,12 @@ namespace DBO.Services
 
         }
 
-        private async Task<User?> GetUserByIdOrEmail(int userId, string email = null)
+        private async Task<User?> GetUserByIdOrEmail(int userId, string? email = null)
         {
             if (email != null && email.Length > 0)
-                return await context.Users.FirstOrDefaultAsync(u => u.Email.ToLower() == email.ToLower());
+                return await context.Users.AsNoTracking().FirstOrDefaultAsync(u => u.Email.ToLower() == email.ToLower());
             else if (userId > 0)
-                return await context.Users.FirstOrDefaultAsync(u => u.UserId == userId);
+                return await context.Users.AsNoTracking().FirstOrDefaultAsync(u => u.UserId == userId);
             else
                 return null;
         }
